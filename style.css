@@ -1,70 +1,75 @@
 body {
     font-family: 'Arial', sans-serif;
-    margin: 0;
+    margin: 10px;
     padding: 10px;
-    background-color: #ece9e9;
+    background-color: #2c3e50;
+    color: #ecf0f1;
   }
-
-  .opening{
-    text-align: center;
-  }
+  
   .container {
     max-width: 800px;
-    margin: 20px auto;
+    margin: 50px auto; /* Increased margin for better centering */
     padding: 20px;
-    background-color: #ffffff;
+    background-color: #34495e;
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
     align-items: center;
+    animation: fadeIn 0.8s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
   
   h1 {
-    color: #111314;
+    color: #3498db;
     margin-bottom: 20px;
   }
   
   .form-group {
     display: flex;
-    flex-direction: row;
+    flex-direction: column; /* Changed to column for better spacing */
     align-items: center;
     margin-bottom: 20px;
   }
   
   .labelinput {
-    flex: 1;
-    margin-right: 20px;
-    text-align: right;
-    color: #555;
-    margin: 4px;
+    text-align: left; /* Adjusted alignment */
+    margin-bottom: 5px; /* Added margin for better spacing */
+    color: #bdc3c7;
   }
   
   .styled-input {
-    margin: 5px;
-    flex: 2;
     padding: 15px;
     box-sizing: border-box;
-    border: 2px solid #4e5153;
+    border: 2px solid #3498db;
     border-radius: 8px;
     width: 100%;
-    font-size: 13px;
-    color: #333;
-    transition: border-color 0.3s;
+    font-size: 16px;
+    color: #ecf0f1;
+    margin: 7px;
+    background-color: #2c3e50;
+    transition: border-color 0.3s, background-color 0.3s, color 0.3s;
   }
   
   .styled-input:focus {
     border-color: #2980b9;
     outline: none;
+    background-color: #34495e;
+    color: #bdc3c7;
   }
   
   .result {
     margin-top: 8px;
-    color: #0e0149;
+    color: #27ae60;
     font-weight: bold;
-    font-size: large; 
-    font-style: oblique;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
   
   button {
@@ -79,27 +84,15 @@ body {
   }
   
   button:hover {
-    background-color: #8729b9;
+    background-color: #2980b9;
   }
   
-  /* Responsive styles */
-  @media (max-width: 600px) {
-    .form-group {
-      flex-direction: column;
-      align-items: stretch;
-    }
-  
-    .labelinput {
-      text-align: left;
-      margin-right: 0;
-      margin-bottom: 8px;
-    }
-  
-    .styled-input {
-      margin-top: 0;
-    }
-  
-    button {
-      width: 100%;
-    }
+
+  label{
+    font-size: 25px;
+    margin: 3px;
+    padding: 5px;
+    font-family: initial;
+    font-weight: bold;
+    
   }
